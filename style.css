@@ -114,9 +114,16 @@ body {
 }
 
 /* Responsive Flower Scaling */
+.flowers {
+  position: relative;
+  transform: scale(0.9);
+  transform-origin: bottom center;
+}
+
 @media (max-width: 768px) {
   .flowers {
-    transform: scale(0.7) translateY(4vmin) !important;
+    transform: scale(1.35) translateY(0) !important;
+    transform-origin: bottom center !important;
   }
   .floating-back-btn {
     top: 16px;
@@ -131,16 +138,17 @@ body {
 
 @media (max-width: 480px) {
   .flowers {
-    transform: scale(0.56) translateY(6vmin) !important;
+    transform: scale(1.55) translateY(0) !important;
+    transform-origin: bottom center !important;
   }
   .floating-back-btn {
-    top: 12px;
-    left: 12px;
-    padding: 0.5rem 0.95rem;
-    font-size: 0.85rem;
+    top: 14px;
+    left: 14px;
+    padding: 0.55rem 1rem;
+    font-size: 0.88rem;
   }
   .top-romantic-header {
-    top: 60px;
+    top: 62px;
   }
 }
 
@@ -186,10 +194,6 @@ body {
     linear-gradient(90deg, rgb(255, 94, 0), rgb(240, 240, 240));
 }
 
-.flowers {
-  position: relative;
-  transform: scale(0.9);
-}
 
 .flower {
   position: absolute;
