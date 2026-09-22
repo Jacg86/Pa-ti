@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti Con Cariño</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow & Floating Canvas -->
+    <div class="bg-ambient">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="app-container">
+
+        <!-- Hero Header -->
+        <header class="hero-header">
+            <div class="badge-tag">
+                <span></span> Especial Para Ti <span></span>
+            </div>
+            <h1 class="hero-title">
+                Hola <span class="nick">estupida</span> 🤍
+            </h1>
+            <p class="hero-subtitle">
+                Te quiero un montón y gracias por todo lo que compartimos.
+            </p>
+            <div class="hero-hint">
+                <span>📸</span> Toca o pasa el cursor sobre las fotos para interactuar
+            </div>
+        </header>
+
+        <!-- Interactive 3D Polaroid Collage Section -->
+        <main class="collage-section">
+
+            <!-- Card 1 -->
+            <article class="polaroid-card" data-id="1" data-rotation="-3.5deg">
+                <div class="tape"></div>
+                <div class="img-wrapper">
+                    <img src="img/A1.jpeg" alt="Momento especial 1" loading="lazy">
+                    <div class="card-shine"></div>
+                    <div class="card-badge"></div>
+                </div>
+                <div class="caption">
+                    Aventuras
+                    <span class="caption-date">Momento 01 • Amistad de verdad</span>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="polaroid-card" data-id="2" data-rotation="3deg">
+                <div class="tape"></div>
+                <div class="img-wrapper">
+                    <img src="img/A2.jpeg" alt="Momento especial 2" loading="lazy">
+                    <div class="card-shine"></div>
+                    <div class="card-badge"></div>
+                </div>
+                <div class="caption">
+                    Siempre Presente (casi)
+                    <span class="caption-date">Momento 02 • De las buenas</span>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="polaroid-card" data-id="3" data-rotation="-2.5deg">
+                <div class="tape"></div>
+                <div class="img-wrapper">
+                    <img src="img/A3.jpeg" alt="Momento especial 3" loading="lazy">
+                    <div class="card-shine"></div>
+                    <div class="card-badge"></div>
+                </div>
+                <div class="caption">
+                    Risas
+                    <span class="caption-date">Momento 03 • Especial</span>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="polaroid-card" data-id="4" data-rotation="4deg">
+                <div class="tape"></div>
+                <div class="img-wrapper">
+                    <img src="img/A4.jpeg" alt="Momento especial 4" loading="lazy">
+                    <div class="card-shine"></div>
+                    <div class="card-badge"></div>
+                </div>
+                <div class="caption">
+                    Buenos Momentos
+                    <span class="caption-date">Momento 04 • Para ti</span>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Action Buttons -->
+        <div class="actions-area">
+            <div class="btn-group">
+                <a href="rosas.html" class="btn-primary-glow" id="roseBtn"
+                    title="Dale aquí, por si no ves que es un botón">
+                    <span class="btn-icon"></span>
+                    <span>Ver tus flores especiales</span>
+                    <span class="btn-icon"></span>
+                </a>
+                <button class="btn-glass" id="openLetterBtn" type="button">
+                    <span>💌</span>
+                    <span>Leer carta</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Audio Toggle Button -->
+    <button class="audio-toggle-btn" id="audioToggleBtn" title="Activar música romántica" aria-label="Música">
+        🔇
+    </button>
+
+    <!-- Photo Lightbox Modal -->
+    <div class="modal-overlay" id="photoModal" role="dialog" aria-modal="true">
+        <div class="modal-container">
+            <button class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+            <div class="lightbox-img-box">
+                <img id="lightboxImg" src="" alt="Foto en grande">
+            </div>
+            <h3 class="lightbox-caption" id="lightboxTitle">Foto Especial</h3>
+            <p class="lightbox-quote" id="lightboxQuote">"Un momento hermoso que guardo en el corazón."</p>
+        </div>
+    </div>
+
+    <!-- Love Letter Modal -->
+    <div class="modal-overlay" id="letterModal" role="dialog" aria-modal="true">
+        <div class="modal-container">
+            <button class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+            <div class="letter-box">
+                <div class="letter-header">
+                    <h3>Para una persona única 🤍</h3>
+                </div>
+                <div class="letter-body">
+                    <p>
+                        Quería tomarme este detalle para recordarte lo increíble que eres y lo mucho que valoro cada
+                        momento, cada risa y cada tontería que compartimos.
+                    </p>
+                    <br>
+                    <p>
+                        No olvides nunca lo especial que eres para mí. ¡Espero que este pequeño detalle te saque una
+                        sonrisa enorme!
+                    </p>
+                </div>
+                <div class="letter-footer">
+                    Con todo mi cariño
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
